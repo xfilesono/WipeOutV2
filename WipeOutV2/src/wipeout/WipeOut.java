@@ -357,7 +357,7 @@ public class WipeOut extends JFrame {
 
     private void dosyayiTemizle() throws IOException {
         File dosya = new File(DeleteFiles.txt);
-        
+        //System.out.println("Test Amaçlı");
         if (!dosya.exists()) {
             dosya.createNewFile();
             
