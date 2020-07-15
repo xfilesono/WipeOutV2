@@ -423,18 +423,15 @@ public class WipeOut extends JFrame {
             jList4.setModel(listModel4);
         }
         
-        if (DeleteFiles.silinenler.isEmpty()){
-            
+        if (DeleteFiles.hicDosyaSilindiMi < 1){
+            DeleteFiles.silinenler = "Silinen Dosyalar\n________________\n" 
+                    + "Aynı Boyuta Sahip Dosya Bulunamadığından\nHiçbir Dosya Silinmedi..";
+            JOptionPane.showMessageDialog(null, DeleteFiles.silinenler);
         }            
         else {
-            //jLabel1.setText(DeleteFiles.silinenler);
-            if (DeleteFiles.hicDosyaSilindiMi < 1)
-                DeleteFiles.silinenler = "Silinen Dosyalar\n________________\n" + 
-                        "Aynı Boyuta Sahip Dosya Bulunamadığından Hiçbir Dosya Silinmedi..";
-            else
-                JOptionPane.showMessageDialog(null, DeleteFiles.silinenler);
+            JOptionPane.showMessageDialog(null, DeleteFiles.silinenler);
         }
-            
+        jButton3.doClick();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

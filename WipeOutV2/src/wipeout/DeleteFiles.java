@@ -25,20 +25,26 @@ public class DeleteFiles extends WipeOut{
     // This is a function for deleting same files...
     public void dosyalariSil(String silinecekDosyaAdi, String tamYolu) {
         
+        
+        
         File silinecekDosya = new File(tamYolu);
         boolean sonuc = silinecekDosya.delete();
         // Mac ve Linuxta Dosya izini sorunu var dosyayı silemiyoruz
         if(sonuc) {
-            //JOptionPane.showMessageDialog(null, silinecekDosyaAdi + " isimli Dosya Silindi ...");
+            exactTime = new OnoTarihZaman();
+            date = exactTime.getTarih();
+            time = exactTime.getZaman();
+            
             hicDosyaSilindiMi++;
-            silinenler += silinecekDosyaAdi + "\n";
+            if (hicDosyaSilindiMi == 1) {
+                silinenler = "Silinen Dosyalar\n________________\n";
+            }
+            silinenler += silinecekDosyaAdi + " (" + date + "-" + time + ")" + "\n";
             System.out.println(silinecekDosyaAdi + " isimli Dosya Silindi ...");
         }
         else
             System.out.println(silinecekDosyaAdi + " isimli Dosya Silinemedi (zaten silinmiş olabilir)!!!");
         
-           /* JOptionPane.showMessageDialog(null, silinecekDosyaAdi + " isimli Dosya Silinemedi (zaten silinmiş)!!!\n" 
-                    + "Klasör Yolu: " + klasor);*/
         
            
            // Silinen dosyaların ikinci kez silinme denemesini engelleme amaçlı yazılan kod.
@@ -112,4 +118,7 @@ public class DeleteFiles extends WipeOut{
     public static String silinenler = "Silinen Dosyalar\n________________\n";
     public static String txt = "SilinenDosyaKayit.txt";
     public static int hicDosyaSilindiMi = 0;
+    public static OnoTarihZaman exactTime;
+    public static String date = "";
+    public static String time = "";
 }
