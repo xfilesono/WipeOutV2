@@ -25,26 +25,31 @@ public class DeleteFiles extends WipeOut{
     // This is a function for deleting same files...
     public void dosyalariSil(String silinecekDosyaAdi, String tamYolu) {
         
+        try {
+            File silinecekDosya = new File(tamYolu);
+            boolean sonuc = silinecekDosya.delete();
         
         
-        File silinecekDosya = new File(tamYolu);
-        boolean sonuc = silinecekDosya.delete();
-        // Mac ve Linuxta Dosya izini sorunu var dosyayı silemiyoruz
-        if(sonuc) {
-            exactTime = new OnoTarihZaman();
-            date = exactTime.getTarih();
-            time = exactTime.getZaman();
-            
-            hicDosyaSilindiMi++;
-            if (hicDosyaSilindiMi == 1) {
-                silinenler = "Silinen Dosyalar\n________________\n";
+            // Mac ve Linuxta Dosya izini sorunu var dosyayı silemiyoruz
+            if(sonuc) {
+                exactTime = new OnoTarihZaman();
+                date = exactTime.getTarih();
+                time = exactTime.getZaman();
+
+                hicDosyaSilindiMi++;
+                if (hicDosyaSilindiMi == 1) {
+                    silinenler = "Silinen Dosyalar\n________________\n";
+                }
+                silinenler += silinecekDosyaAdi + " (" + date + "-" + time + ")" + "\n";
+                System.out.println(silinecekDosyaAdi + " isimli Dosya Silindi ...");
             }
-            silinenler += silinecekDosyaAdi + " (" + date + "-" + time + ")" + "\n";
-            System.out.println(silinecekDosyaAdi + " isimli Dosya Silindi ...");
-        }
-        else
-            System.out.println(silinecekDosyaAdi + " isimli Dosya Silinemedi (zaten silinmiş olabilir)!!!");
+            else
+                System.out.println(silinecekDosyaAdi + " isimli Dosya Silinemedi (zaten silinmiş olabilir)!!!");
         
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         
            
            // Silinen dosyaların ikinci kez silinme denemesini engelleme amaçlı yazılan kod.
