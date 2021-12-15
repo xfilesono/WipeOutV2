@@ -110,6 +110,7 @@ public class WipeOut extends JFrame {
         jComboBox1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 204, 255), new java.awt.Color(153, 204, 255), null, null));
         jComboBox1.setEnabled(false);
 
+        jList1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Resimlerin Listesi", "Burada", "Görüntülenecek..." };
             public int getSize() { return strings.length; }
@@ -118,6 +119,7 @@ public class WipeOut extends JFrame {
         jList1.setToolTipText("");
         jScrollPane1.setViewportView(jList1);
 
+        jList2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Resimlerin Boyutları", "Burada", "Görüntülenecek..." };
             public int getSize() { return strings.length; }
@@ -125,6 +127,7 @@ public class WipeOut extends JFrame {
         });
         jScrollPane2.setViewportView(jList2);
 
+        jList3.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList3.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Aşağıdaki dosyaların", "benzerleri sağ tarafta", "verilmiştir..." };
             public int getSize() { return strings.length; }
@@ -132,6 +135,7 @@ public class WipeOut extends JFrame {
         });
         jScrollPane3.setViewportView(jList3);
 
+        jList4.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList4.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Programın dosyanın", "benzerini bulup", "sildiği dosyalar..." };
             public int getSize() { return strings.length; }
@@ -142,12 +146,12 @@ public class WipeOut extends JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wipeout/images/wipeoutlogo150x150.png"))); // NOI18N
         jLabel2.setText("jLabel2");
 
-        jLabel3.setFont(new java.awt.Font("Book Antiqua", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Book Antiqua", 1, 13)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Dosya İsimleri");
         jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel4.setFont(new java.awt.Font("Book Antiqua", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Book Antiqua", 1, 13)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Dosya Boyutları (byte)");
         jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
