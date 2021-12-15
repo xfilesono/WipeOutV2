@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  * @company CapsCode
  */
 public class DeleteFiles extends WipeOut{
+    // test
     private String klasor;
     //private String silinecekDosyaAdi;
     
