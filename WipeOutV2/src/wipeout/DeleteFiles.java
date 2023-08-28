@@ -20,7 +20,7 @@ public class DeleteFiles extends WipeOut{
     //private String silinecekDosyaAdi;
     
     public DeleteFiles () {
-        this.klasor = super.klasor;
+        this.klasor = super.folder;
     }
     
     // This is a function for deleting same files...
@@ -121,7 +121,7 @@ public class DeleteFiles extends WipeOut{
         }
     }
     public static String dizi[] = test.resimKontrol();
-    public static String silinenler = "Silinen Dosyalar\n________________\n";
+    public static String silinenler = "Deleted Files\n________________\n";
     public static String txt = "SilinenDosyaKayit.txt";
     public static int hicDosyaSilindiMi = 0;
     public static OnoTarihZaman exactTime;

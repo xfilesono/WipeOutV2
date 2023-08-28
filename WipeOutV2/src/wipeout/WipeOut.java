@@ -65,7 +65,7 @@ public class WipeOut extends JFrame {
 
         jButton2.setBackground(new java.awt.Color(125, 176, 227));
         jButton2.setFont(new java.awt.Font("Bell MT", 0, 14)); // NOI18N
-        jButton2.setText("Dosya Türü Seç");
+        jButton2.setText("Choose File Type");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 204, 255), new java.awt.Color(153, 204, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jButton2.setBorderPainted(false);
         jButton2.setEnabled(false);
@@ -77,7 +77,7 @@ public class WipeOut extends JFrame {
 
         jButton3.setBackground(new java.awt.Color(125, 176, 227));
         jButton3.setFont(new java.awt.Font("Bell MT", 0, 14)); // NOI18N
-        jButton3.setText("Dosyaları Listele");
+        jButton3.setText("List Pictures");
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 204, 255), new java.awt.Color(153, 204, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jButton3.setBorderPainted(false);
         jButton3.setEnabled(false);
@@ -89,7 +89,7 @@ public class WipeOut extends JFrame {
 
         jButton4.setBackground(new java.awt.Color(125, 176, 227));
         jButton4.setFont(new java.awt.Font("Bell MT", 0, 14)); // NOI18N
-        jButton4.setText("Aynı Dosyaları Sil");
+        jButton4.setText("Delete Same Pictures");
         jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 204, 255), new java.awt.Color(153, 204, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jButton4.setBorderPainted(false);
         jButton4.setEnabled(false);
@@ -112,7 +112,7 @@ public class WipeOut extends JFrame {
 
         jList1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Resimlerin Listesi", "Burada", "Görüntülenecek..." };
+            String[] strings = { "The Pictures", "are going", "to show here..." };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -121,7 +121,7 @@ public class WipeOut extends JFrame {
 
         jList2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Resimlerin Boyutları", "Burada", "Görüntülenecek..." };
+            String[] strings = { "The Pictures' size", "are going", "to show here..." };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -129,7 +129,7 @@ public class WipeOut extends JFrame {
 
         jList3.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Aşağıdaki dosyaların", "benzerleri sağ tarafta", "verilmiştir..." };
+            String[] strings = { "Similar files", "are given", "on the right..." };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -137,7 +137,7 @@ public class WipeOut extends JFrame {
 
         jList4.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jList4.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Programın dosyanın", "benzerini bulup", "sildiği dosyalar..." };
+            String[] strings = { "Files that the program", "finds and deletes", "similar to the files..." };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -148,23 +148,23 @@ public class WipeOut extends JFrame {
 
         jLabel3.setFont(new java.awt.Font("Book Antiqua", 1, 13)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Dosya İsimleri");
+        jLabel3.setText("Names of the Pics");
         jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel4.setFont(new java.awt.Font("Book Antiqua", 1, 13)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Dosya Boyutları (byte)");
+        jLabel4.setText("Sizes of the Pics (byte)");
         jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel5.setFont(new java.awt.Font("Book Antiqua", 1, 12)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Aynı Dosyalar (solda ilk bulunan-sağda benzeri)");
+        jLabel5.setText("Same Pictures");
         jLabel5.setToolTipText("");
         jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel6.setFont(new java.awt.Font("Bell MT", 0, 12)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("v.2.0 - CapsCode ");
+        jLabel6.setText("v.2.0 - CapsCode Inc.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -254,11 +254,11 @@ public class WipeOut extends JFrame {
         JFileChooser dosyaSec = new JFileChooser();
         dosyaSec.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int sec = dosyaSec.showOpenDialog(null);
-        klasor = dosyaSec.getSelectedFile().getAbsolutePath();
+        folder = dosyaSec.getSelectedFile().getAbsolutePath();
         // test için 
         // JOptionPane.showMessageDialog(null, klasor);
         jButton2.setEnabled(true);
-        jLabel1.setText("Seçilen Klasör: " + klasor);
+        jLabel1.setText("Chosen Folder: " + folder);
         
         // Kodun en son satırı olacak
         jLabel1.setVisible(true);
@@ -267,7 +267,7 @@ public class WipeOut extends JFrame {
     
     
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        File dosya = new File(klasor);
+        File dosya = new File(folder);
         
         String fileType[] = new String[3];
         fileType[0] = jComboBox1.getSelectedItem().toString();
@@ -340,12 +340,12 @@ public class WipeOut extends JFrame {
                     jButton4.setEnabled(true);
                 }
                 else {
-                    listModel1.addElement("Klasörde, Belirtilen");
-                    listModel1.addElement("Türde Dosya");
-                    listModel1.addElement("Bulunamadı...");
-                    listModel2.addElement("Klasörde, Belirtilen");
-                    listModel2.addElement("Türde Dosya");
-                    listModel2.addElement("Bulunamadı...");
+                    listModel1.addElement("No Files of the");
+                    listModel1.addElement("Specified Type Found");
+                    listModel1.addElement("in the Folder...");
+                    listModel2.addElement("No Files of the");
+                    listModel2.addElement("Specified Type Found");
+                    listModel2.addElement("in the Folder...");
                     jList1.setModel(listModel1);
                     jList2.setModel(listModel2);
                 }
@@ -355,7 +355,7 @@ public class WipeOut extends JFrame {
                 dosyayiTemizle();
             }
             catch (Exception e){
-                System.out.println("Hata: " + e.getMessage());
+                System.out.println("Error: " + e.getMessage());
             }
             
             
@@ -398,7 +398,7 @@ public class WipeOut extends JFrame {
                         // Bu hatayı düzeltmem lazım !!!
                         DeleteFiles yeni = new DeleteFiles();
                         yeni.dosyalariSil((String) listModel1.elementAt(j)
-                                , klasor + "\\" +(String)listModel1.elementAt(j));
+                                , folder + "\\" +(String)listModel1.elementAt(j));
                     }
                 }
             }
@@ -407,18 +407,17 @@ public class WipeOut extends JFrame {
         
         if (listModel1.isEmpty()) {
             listModel5 = new DefaultListModel();
-            listModel5.addElement("Klasörde Dosya");
-            listModel5.addElement("Bulunamadı...");
+            listModel5.addElement("File not found");
+            listModel5.addElement("in the folder...");
             jList3.setModel(listModel5);
             jList4.setModel(listModel5);
         }
         else if(listModel3.isEmpty() && listModel4.isEmpty()) {
             listModel5 = new DefaultListModel();
-            listModel5.addElement(dosyadakiElemanlar + " adet " + jComboBox1.getSelectedItem().toString());
-            listModel5.addElement("dosyası arasında");
-            listModel5.addElement("aynı boyutlara");
-            listModel5.addElement("sahip hiçbir");
-            listModel5.addElement("dosya bulunamadı...");
+            listModel5.addElement("Among " + dosyadakiElemanlar + " files;" + jComboBox1.getSelectedItem().toString());
+            listModel5.addElement("no files");
+            listModel5.addElement("with the same size");
+            listModel5.addElement("were found...");
             
             jList3.setModel(listModel5);  
             jList4.setModel(listModel5);
@@ -430,8 +429,8 @@ public class WipeOut extends JFrame {
         }
         
         if (DeleteFiles.hicDosyaSilindiMi < 1){
-            DeleteFiles.silinenler = "Silinen Dosyalar\n________________\n" 
-                    + "Aynı Boyuta Sahip Dosya Bulunamadığından\nHiçbir Dosya Silinmedi..";
+            DeleteFiles.silinenler = "Deleted Files\n________________\n"
+                    + "No Files Deleted Because,\nNo Files of Same Size Be Found..";
             JOptionPane.showMessageDialog(null, DeleteFiles.silinenler);
         }            
         else {
@@ -481,7 +480,7 @@ public class WipeOut extends JFrame {
     private DefaultListModel listModel3;
     private DefaultListModel listModel4;
     private DefaultListModel listModel5;
-    public String klasor;
+    public String folder;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
