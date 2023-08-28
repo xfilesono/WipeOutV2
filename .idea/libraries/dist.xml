@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dist">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WipeOutV2/dist/WipeOutV2 2020.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WipeOutV2/dist/WipeOutV2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

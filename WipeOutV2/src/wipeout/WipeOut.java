@@ -54,7 +54,7 @@ public class WipeOut extends JFrame {
 
         jButton1.setBackground(new java.awt.Color(125, 176, 227));
         jButton1.setFont(new java.awt.Font("Bell MT", 0, 14)); // NOI18N
-        jButton1.setText("Klasör Seç");
+        jButton1.setText("Choose Folder");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 204, 255), new java.awt.Color(153, 204, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
